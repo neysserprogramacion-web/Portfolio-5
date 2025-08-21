@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Catalogue STL</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .item { margin-bottom: 30px; }
+    canvas { width: 300px; height: 300px; border: 1px solid #ccc; }
+  </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon Portfolio</h1>
+  <h1>Catalogue de modèles STL</h1>
+  <div class="item">
+    <h3>Exemple modèle</h3>
+    <div id="viewer"></div>
+    <a href="models/exemple.stl" download>Télécharger STL</a>
+  </div>
+
+  <!-- Import de three.js et du loader STL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/STLLoader.js"></script>
+  <script>
+    // Création du viewer 3D
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(300, 300);
+    document.getElementById("viewer").appendChild(renderer.domElement);
+
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(1, 1, 1).normalize();
+    scene.add(light);
+
+    const loader = new THREE.STLLoader();
+    loader.load("models/exemple.stl", function (geometry) {
+      const material = new THREE.MeshPhongMaterial({ color: 0x5555ff });
+      const mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
+      camera.position.z = 100;
+      renderer.setAnimationLoop(() => renderer.render(scene, camera));
+    });
+  </script>
 </body>
 </html>
