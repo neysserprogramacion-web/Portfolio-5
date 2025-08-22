@@ -1,0 +1,86 @@
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* En-tête */
+header {
+  background: #004080;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 1em;
+}
+
+/* Conteneur du catalogue */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Chaque carte de pièce */
+.piece {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.piece:hover {
+  transform: scale(1.03);
+}
+
+/* Titre de la pièce */
+.piece h3 {
+  margin: 10px 0;
+  color: #004080;
+}
+
+/* Description */
+.piece p {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Bouton télécharger */
+.piece a {
+  display: inline-block;
+  background: #004080;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.piece a:hover {
+  background: #0066cc;
+}
+
+/* Pied de page */
+footer {
+  background: #eee;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
+}
+

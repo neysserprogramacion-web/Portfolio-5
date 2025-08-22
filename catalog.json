@@ -1,0 +1,12 @@
+[
+  {
+    "nom": "Support moteur",
+    "description": "Pièce pour fixer un moteur électrique",
+    "fichier": "support-moteur.stl"
+  },
+  {
+    "nom": "Bride 40mm",
+    "description": "Bride pour tube de diamètre 40 mm",
+    "fichier": "bride-40mm.stl"
+  }
+]
