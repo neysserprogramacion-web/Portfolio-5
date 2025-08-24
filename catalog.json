@@ -12,7 +12,7 @@
   {
     "nom": "pignon_motriz_70mm",
     "description": "roue dentee fixée sur l'arbre d'un moteur, qui transmet le mouvement et la puissance aux autres éléments de transmission.",
-    "fichier": "data/STL/pignon_motriz_70mm.STL"
+    "fichier": "data/STL/pignon_motriz_70mm.stl"
   },
   {
     "nom": "Palier_coulissent",
