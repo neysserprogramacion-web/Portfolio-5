@@ -31,7 +31,9 @@ header p {
   color: #ffcc00;        /* couleur dorée qui contraste */
   font-family: "Arial", sans-serif;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* petit effet d'ombre */
-  text-align: left;   /* <-- ajout pour aligner à gauche */
+   /* Ajout pour aligner le texte à gauche */
+  text-align: left;
+  display: block;         /* pour que l’alignement fonctionne */
 }
 /* Conteneur du catalogue */
 main {
