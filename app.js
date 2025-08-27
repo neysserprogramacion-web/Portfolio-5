@@ -30,3 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(error);
     });
 });
+
+function rechercher() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const pieces = document.querySelectorAll(".piece");
+
+  pieces.forEach(piece => {
+    const titre = piece.querySelector("h3").textContent.toLowerCase();
+    const description = piece.querySelector("p").textContent.toLowerCase();
+
+    if (titre.includes(input) || description.includes(input)) {
+      piece.style.display = "block";
+    } else {
+      piece.style.display = "none";
+    }
+  });
+}
