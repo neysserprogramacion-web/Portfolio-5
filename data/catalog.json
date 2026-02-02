@@ -1,8 +1,8 @@
 [
   {
-    "nom": "Galet de guidage",
+    "nom": "galet de guidage",
     "description": "support mécanique qui guide et réduit le frottement d'un arbre en mouvement par glissement.",
-    "fichier": "stl/Galet_de_guidage.stl"
+    "fichier": "stl/galet_de_guidage.stl"
   },
   {
     "nom": "pignon_280mm",
@@ -15,8 +15,8 @@
     "fichier": "stl/pignon_motriz_70mm.stl"
   },
   {
-    "nom": "Palier_coulissent",
+    "nom": "palier_coulissant",
     "description": "support mecanique qui guide un arbre en mouvement en glissant, tout en réduisant le frottement grâce a un film de lubrification.",
-    "fichier": "st/Palier_coulissent.stl"
+    "fichier": "stl/palier_coulissent.stl"
   }
  ]
