@@ -16,7 +16,7 @@
   },
   {
     "nom": "Palier_coulissent",
-    "description": "data/support mecanique qui guide un arbre en mouvement en glissant, tout en réduisant le frottement grâce a un film de lubrification.",
+    "description": "support mecanique qui guide un arbre en mouvement en glissant, tout en réduisant le frottement grâce a un film de lubrification.",
     "fichier": "STL/Palier_coulissent.STL"
   }
  ]
