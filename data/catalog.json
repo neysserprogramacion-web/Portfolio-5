@@ -1,0 +1,22 @@
+[
+  {
+    "nom": "galet_de_guidage",
+    "description": "support mécanique qui guide et réduit le frottement d'un arbre en mouvement par glissement.",
+    "fichier": "stl/galet_de_guidage.stl"
+  },
+  {
+    "nom": "pignon_280mm",
+    "description": "Piece qui transmet un mouvement et une force par engrenement avec un autre élément",
+    "fichier": "stl/pignon_280mm.stl"
+  },
+  {
+    "nom": "pignon_motriz_70mm",
+    "description": "roue dentee fixée sur l'arbre d'un moteur, qui transmet le mouvement et la puissance aux autres éléments de transmission.",
+    "fichier": "stl/pignon_motriz_70mm.stl"
+  },
+  {
+    "nom": "palier_coulissant",
+    "description": "support mecanique qui guide un arbre en mouvement en glissant, tout en réduisant le frottement grâce a un film de lubrification.",
+    "fichier": "stl/palier_coulissant.stl"
+  }
+ ]
