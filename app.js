@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const catalogContainer = document.getElementById("catalog");
 
   // Charger le fichier JSON qui contient la liste des pièces
-  fetch("data/catalog.json")
+  fetch("stl/catalog.json")
     .then(response => {
       if (!response.ok) {
         throw new Error("Impossible de charger catalog.json");
