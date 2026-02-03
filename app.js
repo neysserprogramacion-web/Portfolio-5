@@ -1,8 +1,6 @@
-// On attend que la page soit complètement chargée
 document.addEventListener("DOMContentLoaded", () => {
   const catalogContainer = document.getElementById("catalog");
 
-  // Charger le fichier JSON qui contient la liste des pièces
   fetch("data/catalog.json")
     .then(response => {
       if (!response.ok) {
@@ -11,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then(data => {
-      // Pour chaque pièce dans le JSON, on crée une "carte"
       data.forEach(piece => {
         const card = document.createElement("div");
         card.className = "piece";
@@ -19,14 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
           <h3>${piece.nom}</h3>
           <p>${piece.description}</p>
-          <a href="stl/${piece.fichier}" download>Télécharger</a>
+          <a href="${piece.fichier}" download>Télécharger</a>
         `;
 
         catalogContainer.appendChild(card);
       });
     })
     .catch(error => {
-      catalogContainer.innerHTML = "<p style='color:red;'>Erreur : catalogue introuvable</p>";
+      catalogContainer.innerHTML =
+        "<p style='color:red;'>Erreur : catalogue introuvable</p>";
       console.error(error);
     });
 });
@@ -39,10 +37,9 @@ function rechercher() {
     const titre = piece.querySelector("h3").textContent.toLowerCase();
     const description = piece.querySelector("p").textContent.toLowerCase();
 
-    if (titre.includes(input) || description.includes(input)) {
-      piece.style.display = "block";
-    } else {
-      piece.style.display = "none";
-    }
+    piece.style.display =
+      titre.includes(input) || description.includes(input)
+        ? "block"
+        : "none";
   });
 }
