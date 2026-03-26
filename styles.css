@@ -4,6 +4,11 @@ body {
   margin: 0;
   background-color: #f4f6fa;
   color: #333;
+
+  /* ✅ AJOUT IMPORTANT */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ===== HEADER ===== */
@@ -178,4 +183,7 @@ footer {
   text-align: center;
   font-size: 0.85em;
   color: #666;
+
+  /* ✅ AJOUT IMPORTANT */
+  margin-top: auto;
 }
