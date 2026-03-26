@@ -13,7 +13,6 @@
     <p>Téléchargez vos fichiers 3D (.STL) directement depuis ce catalogue</p>
 </header>
 
-<!-- ✅ NAVBAR IDENTIQUE à la page pièces -->
 <nav class="navbar">
   <a href="index.html">Accueil</a>
   <a href="#">STL Files</a>
@@ -24,33 +23,34 @@
   <a href="#">À propos</a>
 </nav>
 
-<!-- ✅ SEARCH BAR IDENTIQUE -->
 <div class="search-bar">
   <input type="text" placeholder="Rechercher une machine...">
   <button>Rechercher</button>
 </div>
 
-<!-- ⭐ Catalogue MACHINES -->
+<!-- ⭐ CATALOGUE MACHINES EN GRILLE -->
 
-<div id="catalog">
+<section class="catalog-grid">
 
-  <div class="piece">
-    <h3>Banderoleuse</h3>
-    <p>Machine pour filmer et stabiliser les palettes.</p>
-    <a href="pieces.html?machine=banderoleuse">
-      <button>Toutes les pièces</button>
-    </a>
+  <div class="machine-card">
+      <img src="images/banderoleuse.png" alt="Banderoleuse">
+      <h3>Banderoleuse</h3>
+      <p>Machine pour filmer et stabiliser les palettes.</p>
+      <a href="pieces.html?machine=banderoleuse">
+          <button>Toutes les pièces</button>
+      </a>
   </div>
 
-  <div class="piece">
-    <h3>Convoyeur</h3>
-    <p>Système automatique de transport industriel.</p>
-    <a href="pieces.html?machine=convoyeur">
-      <button>Toutes les pièces</button>
-    </a>
+  <div class="machine-card">
+      <img src="images/convoyeur.png" alt="Convoyeur">
+      <h3>Convoyeur</h3>
+      <p>Système automatique de transport industriel.</p>
+      <a href="pieces.html?machine=convoyeur">
+          <button>Toutes les pièces</button>
+      </a>
   </div>
 
-</div>
+</section>
 
 <footer>
   <p>© 2025 - Mon catalogue industriel</p>
