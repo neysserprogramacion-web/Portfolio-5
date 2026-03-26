@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Catalogue Machines</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>STLDepot</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <header style="background:#0b4c8c;color:white;padding:20px;">
-        <h1>STLDepot</h1>
-        <p>Catalogue des machines industrielles</p>
-    </header>
+<header>
+  <h1>STLDepot</h1>
+  <p>Téléchargez vos fichiers 3D (.STL) directement depuis ce catalogue</p>
+</header>
 
-    <h2 style="margin:20px;">Choisir une machine</h2>
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="#">STL Files</a>
+  <a href="#">Catégories</a>
+  <a href="#">Recherche avancée</a>
+  <a href="#">Contribuer</a>
+  <a href="#">Communauté/Forum</a>
+  <a href="#">À propos</a>
+</nav>
 
-    <div style="display:flex;gap:30px;margin:20px;">
+<div class="search-bar">
+  <input type="text" placeholder="Rechercher une machine...">
+  <button>Rechercher</button>
+</div>
 
-        <div class="piece">
-            <h3>Banderoleuse</h3>
-            <p>Machine pour filmer et stabiliser les palettes.</p>
+<!-- ⭐ ICI catalogue MACHINES -->
 
-            <a href="pieces.html?machine=banderoleuse">
-                <button>Toutes les pièces</button>
-            </a>
-        </div>
+<div id="catalog">
 
-        <div class="piece">
-            <h3>Convoyeur</h3>
-            <p>Système automatique de transport industriel.</p>
+  <div class="piece">
+    <h3>Banderoleuse</h3>
+    <p>Machine pour filmer et stabiliser les palettes.</p>
+    <a href="pieces.html?machine=banderoleuse">
+      <button>Voir les pièces</button>
+    </a>
+  </div>
 
-            <a href="pieces.html?machine=convoyeur">
-                <button>Toutes les pièces</button>
-            </a>
-        </div>
+  <div class="piece">
+    <h3>Convoyeur</h3>
+    <p>Système automatique de transport industriel.</p>
+    <a href="pieces.html?machine=convoyeur">
+      <button>Voir les pièces</button>
+    </a>
+  </div>
 
-    </div>
+</div>
+
+<footer>
+  © 2025 - Mon catalogue industriel
+</footer>
 
 </body>
 </html>
