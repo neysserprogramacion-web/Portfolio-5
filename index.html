@@ -1,195 +1,64 @@
-/* ===== STYLE GÉNÉRAL ===== */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f4f6fa;
-  color: #333;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>STLDepot</title>
+<link rel="stylesheet" href="styles.css">
+</head>
 
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+<body>
 
-/* ===== HEADER ===== */
-header {
-  background: linear-gradient(90deg,#003366,#004c99);
-  color: white;
-  padding: 25px 40px;
-}
+<header>
+    <h1 class="site-name">STLDepot</h1>
+    <p>Téléchargez vos fichiers 3D (.STL) directement depuis ce catalogue</p>
+</header>
 
-.site-name {
-  font-size: 2.6em;
-  font-weight: bold;
-  color: #ffcc00;
-  margin: 0;
-}
+<nav class="navbar">
+  <a href="index.html">Accueil</a>
+  <a href="#">STL Files</a>
+  <a href="#">Catégories</a>
+  <a href="#">Recherche avancée</a>
+  <a href="#">Contribuer</a>
+  <a href="#">Communauté/Forum</a>
+  <a href="#">À propos</a>
+</nav>
 
-header p {
-  margin-top: 5px;
-  opacity: 0.9;
-}
+<div class="search-bar">
+  <input type="text" placeholder="Rechercher une machine...">
+  <button>Rechercher</button>
+</div>
 
-/* ===== NAVBAR ===== */
-.navbar {
-  background-color: #2f4054;
-  display: flex;
-  justify-content: center;
-}
+<!-- ⭐ MAIN (IMPORTANT POUR LE FOOTER) -->
+<main>
 
-.navbar a {
-  color: white;
-  padding: 15px 22px;
-  text-decoration: none;
-  transition: 0.3s;
-}
+  <!-- ⭐ CATALOGUE MACHINES -->
+  <section class="catalog-grid">
 
-.navbar a:hover {
-  background-color: #1abc9c;
-}
+    <div class="machine-card">
+      <img src="images/Banderoleuse.png" alt="Banderoleuse">
+      <h3>Banderoleuse</h3>
+      <p>Machine pour filmer et stabiliser les palettes.</p>
+      <a href="pieces.html?machine=banderoleuse">
+        <button>Toutes les pièces</button>
+      </a>
+    </div>
 
-/* ===== SEARCH BAR ===== */
-.search-bar {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  background: #eef1f6;
-  gap: 10px;
-}
+    <div class="machine-card">
+      <img src="images/Convoyeur.png" alt="Convoyeur">
+      <h3>Convoyeur</h3>
+      <p>Système automatique de transport industriel.</p>
+      <a href="pieces.html?machine=convoyeur">
+        <button>Toutes les pièces</button>
+      </a>
+    </div>
 
-.search-bar input {
-  width: 360px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
+  </section>
 
-.search-bar button {
-  background: #004080;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
+</main>
 
-.search-bar button:hover {
-  background: #0066cc;
-}
+<footer>
+  <p>© 2025 - Mon catalogue industriel</p>
+</footer>
 
-/* ===== MAIN CONTAINER (IMPORTANT) ===== */
-main {
-  flex: 1; /* pousse le footer */
-  display: flex;
-  justify-content: center;
-}
-
-/* ===== CATALOGUE MACHINES ===== */
-.catalog-grid {
-  width: 100%;
-  max-width: 1200px;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 45px;
-  padding: 50px 20px;
-}
-
-/* ===== CARTE MACHINE ===== */
-.machine-card {
-  background: white;
-  border-radius: 18px;
-  padding: 30px;
-  text-align: center;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-  transition: 0.35s;
-}
-
-.machine-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-}
-
-.machine-card img {
-  width: 220px;
-  height: 160px;
-  object-fit: contain;
-  margin-bottom: 18px;
-}
-
-.machine-card h3 {
-  color: #004080;
-  margin-bottom: 8px;
-}
-
-.machine-card p {
-  color: #666;
-  font-size: 0.95em;
-}
-
-.machine-card button {
-  margin-top: 18px;
-  background: linear-gradient(90deg,#004080,#0066cc);
-  color: white;
-  border: none;
-  padding: 12px 22px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.machine-card button:hover {
-  opacity: 0.9;
-}
-
-/* ===== PAGE PIÈCES ===== */
-main.pieces-page {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.piece {
-  background: white;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-  text-align: center;
-  transition: 0.25s;
-}
-
-.piece:hover {
-  transform: scale(1.05);
-}
-
-.piece h3 {
-  color: #004080;
-}
-
-.piece a {
-  display: inline-block;
-  margin-top: 12px;
-  background: #004080;
-  color: white;
-  padding: 9px 15px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-.piece a:hover {
-  background: #0066cc;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: #e9edf3;
-  padding: 18px;
-  text-align: center;
-  font-size: 0.85em;
-  color: #666;
-
-  margin-top: auto;
-}
+</body>
+</html>
