@@ -9,7 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then(data => {
-      data.forEach(piece => {
+
+  const machine = "banderoleuse"
+
+  const piecesFiltrees = data.filter(p => p.machine === machine)
+
+  piecesFiltrees.forEach(piece => {
         const card = document.createElement("div");
         card.className = "piece";
 
