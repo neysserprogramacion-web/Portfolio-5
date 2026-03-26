@@ -7,25 +7,32 @@
 </head>
 <body>
 
-    <h1>Catalogue des Machines</h1>
+    <header style="background:#0b4c8c;color:white;padding:20px;">
+        <h1>STLDepot</h1>
+        <p>Catalogue des machines industrielles</p>
+    </header>
 
-    <div>
+    <h2 style="margin:20px;">Choisir une machine</h2>
 
-        <h2>Banderoleuse</h2>
-        <p>Machine pour filmer les palettes.</p>
+    <div style="display:flex;gap:30px;margin:20px;">
 
-        <a href="pieces.html?machine=banderoleuse">
-            <button>Voir les pièces</button>
-        </a>
+        <div class="piece">
+            <h3>Banderoleuse</h3>
+            <p>Machine pour filmer et stabiliser les palettes.</p>
 
-        <hr>
+            <a href="pieces.html?machine=banderoleuse">
+                <button>Toutes les pièces</button>
+            </a>
+        </div>
 
-        <h2>Convoyeur</h2>
-        <p>Système de transport automatique.</p>
+        <div class="piece">
+            <h3>Convoyeur</h3>
+            <p>Système automatique de transport industriel.</p>
 
-        <a href="pieces.html?machine=convoyeur">
-            <button>Voir les pièces</button>
-        </a>
+            <a href="pieces.html?machine=convoyeur">
+                <button>Toutes les pièces</button>
+            </a>
+        </div>
 
     </div>
 
